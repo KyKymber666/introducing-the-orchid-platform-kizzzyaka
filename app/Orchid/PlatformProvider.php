@@ -105,4 +105,19 @@ class PlatformProvider extends OrchidServiceProvider
                 ->addPermission('platform.systems.users', __('Users')),
         ];
     }
+
+    /**
+     * @return ItemMenu[]
+     */
+    public function registerMainMenu(): array
+    {
+        return [
+            // Другие пункты меню...
+        
+            Menu::make('Email sender')
+                ->icon('envelope-letter')
+                ->route('platform.email')
+                ->title('Tools')
+        ];
+    }
 }
